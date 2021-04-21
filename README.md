@@ -16,12 +16,11 @@ All filters that have been added is going to be listed below here:
 ## Math Behind It
 ### Moving Average
 As the name implies, the moving average filter operates by averaging a number of points from the input signal to produce each point in the output signal. In equation form, this is written:
-><img src="https://latex.codecogs.com/svg.image?\bg_white&space;y[n]\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" title="\bg_white y[n]\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" />
+><a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\large&space;y[n]=\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" target="_blank"><img src="https://latex.codecogs.com/png.latex?\bg_white&space;\large&space;y[n]=\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" title="\large y[n]=\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" /></a>
 
 
 Where `x[n]` is the input signal,`y[n]` is the output signal, and **M** is the number of points in the average. For example, in a 5 point moving average filter, point 80 in the output signal is given by:
-> <img src="https://latex.codecogs.com/svg.image?\bg_white&space;y[80]=\frac{x[80]&plus;x[79]&plus;x[78]&plus;x[77]&plus;x[76]}{5}" title="\bg_white y[80]=\frac{x[80]&plus;x[79]&plus;x[78]&plus;x[77]&plus;x[76]}{5}" />
-
+> <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\large&space;y[80]=\frac{x[80]&plus;x[79]&plus;x[78]&plus;x[77]&plus;x[76]}{5}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\bg_white&space;\large&space;y[80]=\frac{x[80]&plus;x[79]&plus;x[78]&plus;x[77]&plus;x[76]}{5}" title="\large y[80]=\frac{x[80]&plus;x[79]&plus;x[78]&plus;x[77]&plus;x[76]}{5}" /></a>
 ## Sources
 * [Moving Average](https://en.wikipedia.org/wiki/Moving_average)
 
