@@ -46,6 +46,8 @@ void MovingAverageFilter_Init(MovingAverageFilter *filter, uint8_t nPoint)
 
 float MovingAverageFilter_Update(MovingAverageFilter *filter, float input)
 {
+    filter->output = 0.0f;
+    
     /* Data Shift */
     for (uint8_t i = (filter->bufferSize - 1); i >= 0; i--) {
         *((filter->buffer) + (i + 1)) = *((filter->buffer) + i);
@@ -53,7 +55,6 @@ float MovingAverageFilter_Update(MovingAverageFilter *filter, float input)
     *(filter->buffer) = input;
 
     /* Filter Output Calculation */
-    float temp = 0.0f;
     for (uint8_t i = 0; i < filter->bufferSize; i++) {
         filter->output = filter->output + (*(filter->buffer + i) / filter->bufferSize);
     }
