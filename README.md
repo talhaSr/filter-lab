@@ -16,13 +16,10 @@ All filters that have been added is going to be listed below here:
 ## Math Behind It
 ### Moving Average
 As the name implies, the moving average filter operates by averaging a number of points from the input signal to produce each point in the output signal. In equation form, this is written:
-$$
-y[n] = \frac{1}{M}\sum_{m=0}^{M-1}x[n-m]
-$$
+> ![1](https://latex.codecogs.com/svg.image?y[n]&space;=&space;\frac{1}{M}\sum_{m=0}^{M-1}x[n-m])
+
 Where `x[n]` is the input signal,`y[n]` is the output signal, and **M** is the number of points in the average. For example, in a 5 point moving average filter, point 80 in the output signal is given by:
-$$
-y[80]=\frac{x[80]+x[79]+x[78]+x[77]+x[76]}{5}
-$$
+> ![2](https://latex.codecogs.com/svg.image?y[80]=\frac{x[80]&plus;x[79]&plus;x[78]&plus;x[77]&plus;x[76]}{5})
 
 ## Sources
 * [Moving Average](https://en.wikipedia.org/wiki/Moving_average)
