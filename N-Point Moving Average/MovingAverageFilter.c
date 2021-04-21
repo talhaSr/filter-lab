@@ -74,7 +74,7 @@ float MovingAverageFilter_Update(MovingAverageFilter *filter, float input)
 
     /* Filter Output Calculation */
     for (uint8_t i = 0; i < filter->bufferSize; i++) {
-        filter->output = filter->output + (*(filter->buffer + i) / filter->bufferSize);
+        filter->output = filter->output + (*(filter->buffer + i) * (*(filter->impulseResponse + i)));
     }
 
     return filter->output;
