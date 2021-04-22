@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "movingaveragefilter.h": "c"
+        "movingaveragefilter.h": "c",
+        "stdio.h": "c"
     }
 }

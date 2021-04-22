@@ -10,8 +10,7 @@
  */
 
 #include <stdio.h>
-#include "MovingAverageFilter.h"
-
+#include "../NPointMovingAverage/MovingAverageFilter.h"
 
 /* Filter Handler */
 MovingAverageFilter filter;
@@ -23,8 +22,10 @@ float testSignal[20] = {1.0f, 5.0f, 12.5f, 13.2f, 14.5f, 13.9f, 14.1f, 24.0f, 32
 /* Filtered Output Data */
 float testOutput[20];
 
-int main()
+int main(int argc, char *argv[])
 {
+    printf("This is a test condition\n");
+
     /* Initializing Filter for the 5-Point Moving Average */
     MovingAverageFilter_Init(&filter, 5);
 
