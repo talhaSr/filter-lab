@@ -27,8 +27,10 @@
  * 
  */
 
-#include "MovingAverageFilter.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include "MovingAverageFilter.h"
+
 
 void MovingAverageFilter_Init(MovingAverageFilter *filter, uint8_t nPoint)
 {
@@ -49,12 +51,12 @@ void MovingAverageFilter_Init(MovingAverageFilter *filter, uint8_t nPoint)
     }
 
     /* Init Filter Buffer */
-    for (uint8_t i = 0; i < filter->bufferSize; i++) {
+    for (int8_t i = 0; i < filter->bufferSize; i++) {
         *((filter->buffer) + i) = 0.0f;
     }
 
     /* Init Filter Impulse Response */
-    for (uint8_t i = 0; i < filter->bufferSize; i++) {
+    for (int8_t i = 0; i < filter->bufferSize; i++) {
         *((filter->impulseResponse) + i) = (float)(1.0f / filter->bufferSize);
     }
 
@@ -67,13 +69,13 @@ float MovingAverageFilter_Update(MovingAverageFilter *filter, float input)
     filter->output = 0.0f;
 
     /* Data Shift */
-    for (uint8_t i = (filter->bufferSize - 1); i >= 0; i--) {
-        *((filter->buffer) + (i + 1)) = *((filter->buffer) + i);
+    for (int8_t i = (filter->bufferSize - 1); i >= 0; i--) {
+        *(filter->buffer + i + 1) = *(filter->buffer + i);
     }
     *(filter->buffer) = input;
 
     /* Filter Output Calculation */
-    for (uint8_t i = 0; i < filter->bufferSize; i++) {
+    for (int8_t i = 0; i < filter->bufferSize; i++) {
         filter->output = filter->output + (*(filter->buffer + i) * (*(filter->impulseResponse + i)));
     }
 

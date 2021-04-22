@@ -9,14 +9,10 @@
  * 
  */
 
-#ifndef MOVING_AVERAGE_FILTER_H
-    #define MOVING_AVERAGE_FILTER_H
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdint.h>
+
+#ifndef MOVING_AVERAGE_FILTER_H
+#define MOVING_AVERAGE_FILTER_H
 
 /* Filter HandleTypedef */
 typedef struct MovingAverageFilter
@@ -28,12 +24,9 @@ typedef struct MovingAverageFilter
     float output;
 } MovingAverageFilter;
 
-/* Fucntions */
+/* Functions */
 void MovingAverageFilter_Init(MovingAverageFilter *filter, uint8_t nPoint);
 float MovingAverageFilter_Update(MovingAverageFilter *filter, float input);
 
-#ifdef __cplusplus
-}
-#endif
 
 #endif
