@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     /* Calculation */
     for (int i = 0; i < 20; i++) {
         testOutput[i] = MovingAverageFilter_Update(&filter, testSignal[i]);
-        printf("Input: %f\t Output: %f\n", testSignal[i], testOutput[i]);
+        printf("Input: %.3f\t Output: %.3f\n", testSignal[i], testOutput[i]);
     }
 
     return 0;

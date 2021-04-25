@@ -4,7 +4,13 @@
 Digital Filters written in C for software implementations. 
 
 ## How to Use Them?
-`Examples` file will be added soon for filter usage...
+Compiling and running test scripts;
+
+> 1. Open `..\filter-lab\Examples` path in Terminal.
+> 2. `gcc MovingAverageTest.c ..\NPointMovingAverage\MovingAverageFilter.c -o MovingAverageTeset.exe`
+> 3. After compile is done run the `.exe` file in terminal.
+
+![CMD](https://i2.paste.pics/1d2045aa2605691fb21a8d1c740668cd.png)
 
 ## Filter List
 All filters that have been added is going to be listed below here:
@@ -16,7 +22,7 @@ All filters that have been added is going to be listed below here:
 ## Math Behind It
 ### Moving Average
 As the name implies, the moving average filter operates by averaging a number of points from the input signal to produce each point in the output signal. In equation form, this is written:
-><a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\large&space;y[n]=\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" target="_blank"><img src="https://latex.codecogs.com/png.latex?\bg_white&space;\large&space;y[n]=\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" title="\large y[n]=\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" /></a>
+> <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\large&space;y[n]=\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" target="_blank"><img src="https://latex.codecogs.com/png.latex?\bg_white&space;\large&space;y[n]=\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" title="\large y[n]=\frac{1}{M}\sum_{m=0}^{M-1}x[n-m]" /></a>
 
 
 Where `x[n]` is the input signal,`y[n]` is the output signal, and **M** is the number of points in the average. For example, in a 5 point moving average filter, point 80 in the output signal is given by:
