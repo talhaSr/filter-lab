@@ -14,7 +14,7 @@
 
 /* Macros */
 #define PI              3.141592
-#define __FS(T)         (1.0F / T)
+#define __DELTAT(fs)    (1.0F / fs)
 #define __ALPHA(fc, T)  ((2.0F * PI * T * fc) / ((2.0F * PI * T * fc) + 1.0F))
 
 /* Filter HandleTypeDef */

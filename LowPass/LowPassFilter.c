@@ -29,13 +29,13 @@
 
 #include "LowPassFilter.h"
 
-void LowPassFilter_Init(LowPassFilter *filter, float cutoffFreq, float samplePeriod)
+void LowPassFilter_Init(LowPassFilter *filter, float cutoffFreq, float samplingFreq)
 {
     /* Init Input Buffer */
     filter->input = 0.0f;
 
     /* Calculate Alpha Coefficient */
-    filter->alpha = __ALPHA(cutoffFreq, __FS(samplePeriod));
+    filter->alpha = __ALPHA(cutoffFreq, __DELTAT(samplingFreq));
 
     /* Clear Filter Output */
     filter->output[0] = 0.0f;
