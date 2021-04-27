@@ -35,7 +35,7 @@ void LowPassFilter_Init(LowPassFilter *filter, float cutoffFreq, float samplingF
     filter->input = 0.0f;
 
     /* Calculate Alpha Coefficient */
-    filter->alpha = __ALPHA(cutoffFreq, __DELTAT(samplingFreq));
+    filter->alpha = (float)__ALPHA(cutoffFreq, (float)__DELTAT(samplingFreq));
 
     /* Clear Filter Output */
     filter->output[0] = 0.0f;
