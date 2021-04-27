@@ -29,6 +29,8 @@ Where `x[n]` is the input signal,`y[n]` is the output signal, and **M** is the n
 > <a href="https://www.codecogs.com/eqnedit.php?latex=\bg_white&space;\large&space;y[80]=\frac{x[80]&plus;x[79]&plus;x[78]&plus;x[77]&plus;x[76]}{5}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\bg_white&space;\large&space;y[80]=\frac{x[80]&plus;x[79]&plus;x[78]&plus;x[77]&plus;x[76]}{5}" title="\large y[80]=\frac{x[80]&plus;x[79]&plus;x[78]&plus;x[77]&plus;x[76]}{5}" /></a>
 ## Sources
 * [Moving Average](https://en.wikipedia.org/wiki/Moving_average)
+* [Low Pass Filter](https://en.wikipedia.org/wiki/Low-pass_filter)
+* [High Pass Filter](https://en.wikipedia.org/wiki/High-pass_filter)
 
 # License
 Copyright (c) 2021 Talha Sarı
